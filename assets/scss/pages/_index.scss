@@ -1,3 +1,175 @@
-.index-title {
-  font-size: 100px;
+@import 'swiper/css/bundle';
+
+.swiper-pagination-bullet{
+  width: 100px;
+  height: 4px;
+  border-radius: 0;
+  
+  &-active{
+    background-color: $primary!important;
+  }
 }
+.hero-images {
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 16px;
+  }
+  .swiper-pagination-bullet{
+    background-color: $white;
+    opacity: 1;
+  }
+  .swiper-slide {
+    height: 840px;
+    background-size: cover;
+    background-position: center;
+    @include media-breakpoint-down(md){
+      height: 700px;
+    }
+    &-1 {
+      background-image: url(../assets/images/Banner-1.png);
+      @include media-breakpoint-down(md) { 
+        background-image: url(../assets/images/Banner-1-m.png);
+       }
+    }
+
+    &-2 {
+      background-image: url(../assets/images/Banner-2.png);
+            @include media-breakpoint-down(md) { 
+        background-image: url(../assets/images/Banner-2-m.png);
+       }
+    }
+
+    &-3 {
+      background-image: url(../assets/images/Banner-3.png);
+            @include media-breakpoint-down(md) { 
+        background-image: url(../assets/images/Banner-3-m.png);
+       }
+    }
+  }
+
+
+  form{
+    margin-top: 400px;
+    .input-group{
+      width: 416px;
+    }
+  }
+}
+.area-section{
+  
+  .area{
+    // padding: 0;
+    .cover{
+      background-color: hsla(0, 0%, 0%, 0.2);
+      transition: .3s;
+    }
+    .intro{
+      opacity: 0;
+      transition: .3s;
+      // margin: 0 24px;
+      width: calc(100% - 48px)
+    }
+    .tab-area{
+      bottom: 24px;
+      right: 24px;
+      transition: .3s;
+    }
+    &:hover{
+      .cover{
+        background-color: hsla(0, 0%, 0%, 0.6);
+      }
+      .intro{
+        opacity: 1;
+      }
+      .tab-attraction{
+        opacity: 0;
+      }
+    }
+  }
+  img{
+    line-height: 0;
+  }
+}
+.seasons-section{
+  .season{
+    .cover{
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+.tourist-spot-section{
+  background-image: url(/assets/images/background.png);
+  
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 120px;
+  }
+  .swiper-slide {
+    transition: .3s;
+    transform: scale(0.8);
+    &.swiper-slide-active{
+      transform: scale(1);
+      
+    }
+
+
+   
+
+    @include media-breakpoint-down(sm){
+      transform: scale(.9);
+
+      &.swiper-slide-active{
+        transform: scale(.9);
+        
+      }
+    }
+    
+  }
+}
+.article-section {
+  .cover{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .intro{
+    bottom: 20px;
+    left: 32px;
+  }
+  .article{
+    &:not(:first-child){
+      &::before{
+        content: "";
+        width: 80px;
+        height: 2px;
+        background-color: #282828;
+        // text-align: center;
+        margin: 60px auto;
+        display: inline-block;
+      }
+    }
+
+    &:nth-child(even){
+      >.d-flex{
+        flex-direction: row-reverse;
+      }
+    }
+    @include media-breakpoint-down(md){
+      >.d-flex{
+        flex-direction: row;
+        gap: 16px
+      }
+    }
+  }
+}
+
+.about-us-section{
+  .col{
+    width: 20%;
+    // @include media-breakpoint-down(lg){
+    //   width: 33.33%;
+    // }
+    // @include media-breakpoint-down(md){
+    //   width: 100%;
+    // }
+  }
+}
+
+

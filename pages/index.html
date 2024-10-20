@@ -1,19 +1,702 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+</head>
 
-    <%- include('./layout/footer'); -%>
+<body>
+  <%- include('./layout/header'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+  <main>
+
+    <section class="hero-images">
+      <div class="container-xxl position-relative">
+        <div class="position-absolute top-0 start-0 z-2">
+          <form>
+            <div class="mb-3 d-flex flex-column gap-4">
+              <label for="exampleInputPassword1"
+                class="bg-white text-black text-center fs-1 p-7 align-self-start">日本趣哪玩</label>
+              <div class="input-group">
+                <input type="text" class="form-control form-control-sm rounded-0 border-white " placeholder="搜尋"
+                  aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary bg-white rounded-0 border-white " type="submit"
+                  id="button-addon2"><i class="bi bi-search "></i></button>
+              </div>
+              <div class="d-flex gap-3">
+                <button type="button" class="btn btn-white rounded-pill opacity-80 opacity-hover-100">晴空塔</button>
+                <button type="button" class="btn btn-white rounded-pill opacity-80 opacity-hover-100">東京迪士尼</button>
+              </div>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          </form>
+        </div>
+      </div>
+      <div class="swiper banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-1"></div>
+          <div class="swiper-slide swiper-slide-2"></div>
+          <div class="swiper-slide swiper-slide-3"></div>
+        </div>
+        <div class="swiper-pagination banner-pagination"></div>
+      </div>
+    </section>
+    <section class="scroll-section py-6 bg-background">
+      <div class="d-flex flex-column align-items-center gap-2">
+        <span>
+          SCROLL
+        </span>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+    </section>
+    <section class="area-section bg-background ">
+      <div class="container-xxxl m-auto">
+        <div class="row g-7">
+          <div class="col-6">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">北海道</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">北海道</h2>
+                  <p class="intro-desc text-white">北海道是日本最北的島嶼，以壯麗的自然景觀、滑雪場、薰衣草田和海鮮著稱。札幌市的雪祭和美食也是遊客熱愛的特色。</p>
+                </div>
+
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-1-m.png">
+                <img class="w-100" src="../assets/images/attraction-1.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">關東</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">關東</h2>
+                  <p class="intro-desc text-white">日本關東地區是以首都東京都為中心,加上周圍的6個縣茨城、栃木、群馬、埼玉、千葉、神奈川的1都6縣所組成。</p>
+                </div>
+
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-2-m.png">
+                <img class="w-100" src="../assets/images/attraction-2.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">東北</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">東北</h2>
+                  <p class="intro-desc text-white">東北位於日本本州北部，以自然風光如櫻花、溫泉和滑雪場著稱。著名景點包括松島、青森的弘前城以及藏王的雪怪。</p>
+                </div>
+
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-3-m.png">
+                <img class="w-100" src="../assets/images/attraction-3.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">近畿</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">近畿</h2>
+                  <p class="intro-desc text-white">近畿位於日本中部，以歷史文化和古都京都、奈良著名。大阪、神戶提供現代都市風情，和歌山的自然美景也吸引遊客。</p>
+                </div>
+
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-4-m.png">
+                <img class="w-100" src="../assets/images/attraction-4.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">四國</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">四國</h2>
+                  <p class="intro-desc text-white">四國是日本的第四大島，以遍布的寺廟朝聖路線、德島的阿波舞、香川的烏龍麵和壯麗的瀨戶內海景觀聞名。</p>
+                </div>
+                <div class="mask"></div>
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-5-m.png">
+                <img class="w-100" src="../assets/images/attraction-5.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">中部</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">中部</h2>
+                  <p class="intro-desc text-white">日本中部地區位於本州島中段，包括愛知縣、岐阜縣、長野縣等地，擁有豐富的歷史遺產、自然景觀和美食文化，吸引不少遊客來此探索。</p>
+                </div>
+                <div class="mask"></div>
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-6-m.png">
+                <img class="w-100" src="../assets/images/attraction-6.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">中國</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">中國</h2>
+                  <p class="intro-desc text-white">日本中國地區位於本州南部，包括廣島縣、岡山縣、山口縣等，擁有悠久的歷史和文化遺產，以及美麗的自然景觀和海岸線，吸引許多遊客來此體驗。
+                  </p>
+                </div>
+                <div class="mask"></div>
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-7-m.png">
+                <img class="w-100" src="../assets/images/attraction-7.png">
+              </picture>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="flex-item position-relative area">
+              <h2 class="position-absolute p-7 bg-white z-3 tab-area mb-0 fs-2">九州</h2>
+              <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                <div class="intro text-center position-absolute top-50 start-50 z-3 translate-middle">
+                  <h2 class="intro-area text-white">九州</h2>
+                  <p class="intro-desc text-white">日本九州位於西南部，包括福岡縣、長崎縣、熊本縣等，擁有豐富多元的文化、溫泉和美食。風景優美，吸引眾多遊客前往探索。</p>
+                </div>
+                <div class="mask"></div>
+              </div>
+              <picture>
+                <source media="(max-width: 768px)" srcset="../assets/images/attraction-8-m.png">
+                <img class="w-100" src="../assets/images/attraction-8.png">
+              </picture>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <div class="linear-bg">
+
+      <section class="seasons-section bg-background py-120">
+        <div class="container-xxl ">
+          <h3 class="text-black fw-bold fs-2 d-flex justify-content-center gap-8 mb-5">
+            <img src="../assets/images/fan.png">
+            玩轉四季
+            <img src="../assets/images/fan.png">
+          </h3>
+          <div class="row g-7">
+            <div class="col-sm-6 col-lg-3">
+              <div class="flex-item position-relative season">
+                <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2 p-7">
+                  <div class="d-flex flex-column justify-content-between h-100 ">
+                    <div class="intro ">
+                      <h3 class="intro-month text-white fs-3">3~5月</h3>
+                      <p class="intro-desc text-white fs-5">溫和宜人，氣溫逐漸回暖。</p>
+                    </div>
+                    <h2 class="text-white mb-0 fs-1 season-tab">春</h2>
+                  </div>
+
+                  <div class="mask"></div>
+                </div>
+                <img class="w-100" src="../assets/images/spring.png">
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="flex-item position-relative season">
+                <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2 p-7">
+                  <div class="d-flex flex-column justify-content-between h-100 ">
+                    <div class="intro ">
+                      <h3 class="intro-month text-white fs-3">6~8月</h3>
+                      <p class="intro-desc text-white fs-5">炎熱潮濕，7、8月最熱。</p>
+                    </div>
+                    <h2 class="text-white mb-0 fs-1 season-tab">夏</h2>
+                  </div>
+
+                  <div class="mask"></div>
+                </div>
+                <img class="w-100" src="../assets/images/summer.png">
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="flex-item position-relative season">
+                <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2 p-7">
+                  <div class="d-flex flex-column justify-content-between h-100 ">
+                    <div class="intro ">
+                      <h3 class="intro-month text-white fs-3">9~11月</h3>
+                      <p class="intro-desc text-white fs-5">涼爽舒適，天氣晴朗</p>
+                    </div>
+                    <h2 class="text-white mb-0 fs-1 season-tab">秋</h2>
+                  </div>
+
+                  <div class="mask"></div>
+                </div>
+                <img class="w-100" src="../assets/images/autumn.png">
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="flex-item position-relative season">
+                <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2 p-7">
+                  <div class="d-flex flex-column justify-content-between h-100 ">
+                    <div class="intro ">
+                      <h3 class="intro-month text-white fs-3">12~2月</h3>
+                      <p class="intro-desc text-white fs-5">寒冷乾燥，北部和山區有大量降雪。</p>
+                    </div>
+                    <h2 class="text-white mb-0 fs-1 season-tab">冬</h2>
+                  </div>
+
+                  <div class="mask"></div>
+                </div>
+                <img class="w-100" src="../assets/images/winter.png">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="tourist-spot-section position-relative py-120">
+        <h3 class="text-black fw-bold fs-2 d-flex justify-content-center gap-8 mb-5">
+          <img src="../assets/images/fan.png">
+          人氣景點
+          <img src="../assets/images/fan.png">
+        </h3>
+        <div class="swiper card-swiper">
+          <div class="swiper-wrapper pb-5">
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/disney-m.png">
+                  <img class="w-100" src="../assets/images/disney.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">東京迪士尼</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/tokyo-tower-m.png">
+                  <img class="w-100" src="../assets/images/tokyo-tower.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">東京鐵塔</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/temple-m.png">
+                  <img class="w-100" src="../assets/images/temple.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">淺草寺</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/sky-tower-m.png">
+                  <img class="w-100" src="../assets/images/sky-tower.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">晴空塔</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/universal-m.png">
+                  <img class="w-100" src="../assets/images/universal.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">環球影城</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card shadow">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../assets/images/fuji-m.png">
+                  <img class="w-100" src="../assets/images/fuji.png">
+                </picture>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">富士山</h5>
+                    <button type="button" class="btn p-0 text-danger"><i class="bi bi-suit-heart-fill"></i></button>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="stars">
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star-fill "></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                      <button type="button" class="btn p-0 text-dark-yellow"><i class="bi bi-star"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-link">心得(999+)</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination card-pagination"></div>
+
+
+      </section>
+
+      <section class="article-section position-relative py-120">
+        <div class="container-xxl ">
+          <h3 class="text-black fw-bold fs-2 d-flex justify-content-center gap-8 mb-5">
+            <img src="../assets/images/fan.png">
+            熱門文章
+            <img src="../assets/images/fan.png">
+          </h3>
+          <div class="d-flex flex-column">
+
+            <div class="article text-center">
+              <div class="d-flex align-items-center row gx-4">
+                <div class="col-md-6 ">
+                  <div class="position-relative">
+                    <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                      <div class="intro position-absolute ">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img class="w-auto" src="../assets/images/avatar.png">
+                          <h4 class="intro-month text-white avatar fs-6 mb-0 ">Emma Huang</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../assets/images/article-1-m.png">
+                      <img class="w-100" src="../assets/images/article-1.png">
+                    </picture>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body d-flex gap-4 flex-column text-start p-5">
+                    <h5 class="card-title fs-5 fw-bold">東京迪士尼</h5>
+                    <div class="pb-3">
+                      <p class="card-text">
+                        剛從東京迪士尼回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。入園的那一刻起,就感覺自己彷彿置身於一個完全不同的世界。每個角落都經過精心設計,充滿了迪士尼的魔法。</p>
+                      <button type="button" class="btn btn btn-outline-primary rounded-pill py-3 px-6">查看更多 </button>
+                    </div>
+                    <div class="d-flex row">
+                      <div class="col-2"><i class="bi bi-eye-fill"></i> <span class="text-black"> 999+</span></div>
+                      <div class="col-2"><i class="bi bi-suit-heart-fill text-danger"></i><span class="text-black">
+                          999+</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="article text-center">
+              <div class="d-flex align-items-center row gx-4 ">
+                <div class="col-md-6 ">
+                  <div class="position-relative">
+                    <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                      <div class="intro position-absolute ">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img class="w-auto" src="../assets/images/avatar.png">
+                          <h4 class="intro-month text-white avatar fs-6 mb-0 ">Emma Huang</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../assets/images/article-2-m.png">
+                      <img class="w-100" src="../assets/images/article-2.png">
+                    </picture>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body d-flex gap-4 flex-column text-start p-5">
+                    <h5 class="card-title fs-5 fw-bold">晴空塔</h5>
+                    <div class="pb-3">
+                      <p class="card-text">
+                        最讓我印象深刻的是玻璃地板區。站在透明的玻璃上,腳下就是350米的高空,那種刺激感真的無法用言語形容。我朋友差點不敢走上去,最後我們拉著手一起踏上去的,留下了超棒的照片。</p>
+                      <button type="button" class="btn btn btn-outline-primary rounded-pill py-3 px-6">查看更多 </button>
+                    </div>
+                    <div class="d-flex row">
+                      <div class="col-2"><i class="bi bi-eye-fill"></i> <span class="text-black"> 999+</span></div>
+                      <div class="col-2"><i class="bi bi-suit-heart-fill text-danger"></i><span class="text-black">
+                          999+</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="article text-center">
+              <div class="d-flex align-items-center row gx-4 ">
+                <div class="col-md-6 ">
+                  <div class="position-relative">
+                    <div class="cover w-100 h-100 position-absolute top-0 start-0 z-2">
+                      <div class="intro position-absolute ">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img class="w-auto" src="../assets/images/avatar.png">
+                          <h4 class="intro-month text-white avatar fs-6 mb-0 ">Emma Huang</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../assets/images/article-3-m.png">
+                      <img class="w-100" src="../assets/images/article-3.png">
+                    </picture>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body d-flex gap-4 flex-column text-start p-5">
+                    <h5 class="card-title fs-5 fw-bold">淺草寺</h5>
+                    <div class="pb-3">
+                      <p class="card-text">
+                        淺草寺是東京的歷史地標,充滿了傳統文化與美食。走在仲見世街上感受古風,祈求平安,心情愉快!</p>
+                      <button type="button" class="btn btn btn-outline-primary rounded-pill py-3 px-6">查看更多 </button>
+                    </div>
+                    <div class="d-flex row">
+                      <div class="col-2"><i class="bi bi-eye-fill"></i> <span class="text-black"> 999+</span></div>
+                      <div class="col-2"><i class="bi bi-suit-heart-fill text-danger"></i><span class="text-black">
+                          999+</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools-section py-120">
+        <div class="container-xxl ">
+          <h3 class="text-black fw-bold fs-2 d-flex justify-content-center gap-8 mb-5">
+            <img src="../assets/images/fan.png">
+            旅遊神器
+            <img src="../assets/images/fan.png">
+          </h3>
+          <div class="row g-7">
+            <div class="col-sm-6 col-lg-3">
+              <div class="tool bg-white py-4 px-10">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/weather.png">
+                  <h3 class="text-black mb-0 fs-4 tool-tab text-center">行動天氣通</h3>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="tool bg-white py-4 px-10">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/money.png">
+                  <h3 class="text-black mb-0 fs-4 tool-tab text-center">幣算達人</h3>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="tool bg-white py-4 px-10">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/food.png">
+                  <h3 class="text-black mb-0 fs-4 tool-tab text-center">食徑尋味</h3>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="tool bg-white py-4 px-10">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/tourist.png">
+                  <h3 class="text-black mb-0 fs-4 tool-tab text-center">近觀勝跡</h3>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us-section py-120">
+        <div class="container-xxl ">
+          <div class="text-center mb-5">
+
+            <h3 class="text-black fw-bold fs-2 d-flex justify-content-center gap-8">
+              <img src="../assets/images/fan.png">
+              關於我們
+              <img src="../assets/images/fan.png">
+            </h3>
+            <p class="text-dark-yellow">我們是一群熱愛旅遊＆編碼的小夥伴</p>
+          </div>
+          <div class="row gx-10">
+            <div class="col">
+              <div class="about-us p-4">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/about-us.png">
+                  <h4 class="text-black mb-0 fs-5 tool-tab text-center">安安兒</h4>
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="about-us p-4">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/about-us.png">
+                  <h4 class="text-black mb-0 fs-5 tool-tab text-center">atien0816</h4>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="about-us p-4">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/about-us.png">
+                  <h4 class="text-black mb-0 fs-5 tool-tab text-center">阿蘇</h4>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="about-us p-4">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/about-us.png">
+                  <h4 class="text-black mb-0 fs-5 tool-tab text-center">Ho</h4>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="about-us p-4">
+                <div class="d-flex flex-column">
+                  <img class="w-100" src="../assets/images/about-us.png">
+                  <h4 class="text-black mb-0 fs-5 tool-tab text-center">David#333</h4>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+  </main>
+
+
+  <%- include('./layout/footer'); -%>
+
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
