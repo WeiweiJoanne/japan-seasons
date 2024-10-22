@@ -49,8 +49,12 @@
 
   form{
     margin-top: 400px;
+    // padding: 0 -12px 0 -12px;
     .input-group{
       width: 416px;
+      @include media-breakpoint-down(sm){
+        width: 100%
+      }
     }
   }
 }

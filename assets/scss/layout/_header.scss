@@ -1,1 +1,9 @@
 
+@include media-breakpoint-down(lg) {
+    .navbar-nav >.nav-item  {
+      text-align: center;
+    }
+    .btn{
+        flex-direction: column;
+    }
+  }

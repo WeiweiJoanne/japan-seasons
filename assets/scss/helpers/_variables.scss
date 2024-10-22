@@ -428,7 +428,8 @@ $spacers: (
   7: $spacer * .75,
   8: $spacer * 2.25, //36px
   9: $spacer * 1.25, //20px
-  10: $spacer * 4.875, //20px
+  10: $spacer * 4.875, //78px
+  11: $spacer * 3.75, //60px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -641,7 +642,7 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
+$line-height-base:            1.18 !default; //1.5
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
@@ -660,7 +661,8 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: 14px,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1736,7 +1738,7 @@ $btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y:               $modal-inner-padding !default;
 $offcanvas-padding-x:               $modal-inner-padding !default;
-$offcanvas-horizontal-width:        400px !default;
+$offcanvas-horizontal-width:        100% !default; //400px
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-border-color:            $modal-content-border-color !default;
