@@ -1,5 +1,29 @@
-.container-view{
-    //color: aquamarine;顏色測試
-    padding-bottom: 80px;
-    width:1296px;
+
+
+.mb-184{
+    padding-bottom: 184px;
+}
+
+.mb-80{
+    margin-bottom: 80px;
+}
+
+.color-test{
+    color:aqua;
+}
+
+.wave-bg{
+    background-image: url(/assets/images/background.png);
+}
+
+.tool-link > img {
+    width: 64px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.tool-link{
+    text-align: center;
+    margin-bottom: 16px;
+    background-color: white;
 }
