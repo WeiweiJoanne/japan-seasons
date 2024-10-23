@@ -1,7 +1,7 @@
 @import 'swiper/css/bundle';
 
 .homepage {
-  margin-top: 85px;
+  margin-top: 80px;
 
   .swiper-pagination-bullet {
     width: 100px;
@@ -195,6 +195,15 @@
           flex-direction: row;
           gap: 16px
         }
+      }
+    }
+  }
+  .tools-section{
+    .tool{
+      transition: .3s;
+      &:hover{
+        box-shadow:2px 2px 20px #0000001F;
+        
       }
     }
   }
