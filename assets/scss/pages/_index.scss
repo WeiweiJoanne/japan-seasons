@@ -76,6 +76,30 @@
     }
   }
 
+  @keyframes arrowLoop {
+    0% {
+      transform: translateY(0);
+      opacity: .4;
+    }
+
+    70% {
+      transform: translateY(12px);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(12px);
+      opacity: 1;
+    }
+  }
+
+  .scroll-section-btn {
+    i {
+      animation: arrowLoop 1s .2s infinite backwards;
+    }
+  }
+
+
   .area-section {
 
     .area {
@@ -198,12 +222,14 @@
       }
     }
   }
-  .tools-section{
-    .tool{
+
+  .tools-section {
+    .tool {
       transition: .3s;
-      &:hover{
-        box-shadow:2px 2px 20px #0000001F;
-        
+
+      &:hover {
+        box-shadow: 2px 2px 20px #0000001F;
+
       }
     }
   }
