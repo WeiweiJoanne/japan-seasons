@@ -1,8 +1,10 @@
-@include media-breakpoint-down(md) {
-  .footer{
-
+.footer{
+  .nav-link:hover {
+    color: $primary!important
+  }
+  @include media-breakpoint-down(md) {
     .container-xxl>.d-flex,.nav {
-     flex-direction: column;
-   }
+      flex-direction: column;
+    }
   }
 }
