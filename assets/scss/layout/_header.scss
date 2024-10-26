@@ -1,9 +1,50 @@
+.navbar {
 
-@include media-breakpoint-down(lg) {
-    .navbar-nav >.nav-item  {
-      text-align: center;
+  .user-status {
+
+    .logged {
+      &-in {
+        display: none;
+      }
+
+      &-out {
+        display: block;
+      }
     }
-    .btn{
-        flex-direction: column;
+
+    &.is-user-logged-in {
+      .logged {
+        &-in {
+          display: block;
+        }
+
+        &-out {
+          display: none;
+        }
+      }
     }
   }
+
+  .nav-link:hover {
+    color: $primary;
+  }
+
+  @include media-breakpoint-down(lg) {
+    >.nav-item {
+      text-align: center;
+    }
+
+    .btn {
+      flex-direction: column;
+    }
+  }
+}
+
+// @include media-breakpoint-down(lg) {
+//     .navbar-nav >.nav-item  {
+//       text-align: center;
+//     }
+//     .btn{
+//         flex-direction: column;
+//     }
+//   }
