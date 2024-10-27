@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="linear-bg">
+    <!-- 1. top -->
+    <%- include('./layout/header'); -%>
+    <!-- 2. header -->
+    <header class="text-white search-container">
+        <div>
+            <div class="search-wrapper">
+                <input type="text" class="search-input" id="search-input" placeholder="搜尋">
+                <span class="material-symbols-outlined search-icon">search</span> 
+            </div>
+            <div class="d-flex options-container">
+                <!-- 選項列表 -->
+                <ul class="options-list " >
+                    <li>東京</li>
+                    <li>大阪</li>
+                    <li>滑雪</li>
+                    <li>京都</li>
+                    <li>東京迪士尼</li>
+                    <li>名古屋</li>
+                    <li>黑部立山</li>
+                    <li>淺草寺</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. main -->
+    <div class="searchMain position-relative">
+        <div class="container">
+            <div class="item-list">
+                <div class="text-end">
+                    <a class="sort-label text-nowrap" href="#">按分數排序：由高到低</a>
+                </div>
+                
+                <!-- 排序標籤 -->
+                <div class="searchItem">
+                    <img src="../assets/images/list_disney.png" alt="Item 1"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            東京迪士尼
+                            <span class="item-score">5.0</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">剛從東京迪士尼回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從東京迪士尼回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從東京迪士尼回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <div class="material-symbols-outlined heart-icon">favorite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_osaka_castle.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            大阪城
+                            <span class="item-score">4.7</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">剛從大阪城回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從大阪城回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從大阪城回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <div class="material-symbols-outlined heart-icon">favorite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_sensoji_temple.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            清水寺
+                            <span class="item-score">4.7</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">剛從清水寺回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從清水寺回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從清水寺回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <div class="material-symbols-outlined heart-icon">favorite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_hokkaido.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            北海道
+                            <span class="item-score">4.7</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">剛從北海道回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從北海道回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從北海道回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <div class="material-symbols-outlined heart-icon">favorite</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_kyto.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            京都
+                            <span class="item-score">4.7</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">剛從京都回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從京都回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。剛從京都回來,整個人還沉浸在那夢幻的氛圍中!真的是一次難忘的體驗。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <div class="material-symbols-outlined heart-icon">favorite</div>
+                        </div>
+                    </div>
+                </div>  
+                
+                <!-- 分頁功能 -->
+                <div class="pagination">
+                    <a class="page-button" id="first-page"><span class="material-symbols-outlined">first_page</span></a> <!-- 第一頁 -->
+                    <a class="page-button" id="prev-page"><span class="material-symbols-outlined">chevron_left</span></a> <!-- 上一頁 -->
+                    <a class="page-number">第 1 頁</a> <!-- 當前頁數 -->
+                    <a class="page-button" id="next-page"><span class="material-symbols-outlined">chevron_right</span></a> <!-- 下一頁 -->
+                    <a class="page-button" id="last-page"><span class="material-symbols-outlined">last_page</span></a> <!-- 最後一頁 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. footer -->
+    <!-- ================================== -->
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js">
+        const searchInput = document.getElementById("search-input");
+        
+        // 偵測按下 Enter 鍵時觸發搜尋
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const query = searchInput.value;
+                alert("搜尋: " + query); // 這裡你可以替換成實際的搜尋邏輯
+            }
+        });
+
+        // 分頁功能
+        const currentPage = 1; // 當前頁數
+        const totalPages = 5; // 總頁數
+
+        // 假設這裡是你需要的分頁功能的邏輯，你可以擴展這部分來處理實際的頁數變更
+        document.getElementById("first-page").addEventListener("click", function() {
+            alert("返回到第一頁");
+        });
+
+        document.getElementById("prev-page").addEventListener("click", function() {
+            alert("返回到上一頁");
+        });
+
+        document.getElementById("next-page").addEventListener("click", function() {
+            alert("前往下一頁");
+        });
+
+        document.getElementById("last-page").addEventListener("click", function() {
+            alert("前往最後一頁");
+        });
+    </script>
+</body>
+</html>
