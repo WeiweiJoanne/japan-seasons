@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>關於我們</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script type="module" crossorigin src="/japan-seasons/assets/index-aa66311b.js"></script>
-    <link rel="stylesheet" href="/japan-seasons/assets/index-eb1718db.css">
+    <script type="module" crossorigin src="/japan-seasons/assets/main-718e8acd.js"></script>
+    <link rel="stylesheet" href="/japan-seasons/assets/main-90bb4f3c.css">
   </head>
   <body class="linear-bg">
     <header class="navbar navbar-expand-lg bg-background fixed-top py-3">
@@ -36,7 +36,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav mx-auto mb-0 d-flex align-items-center gap-3">
           <li class="nav-item ">
-            <a class="nav-link px-6 py-3" aria-current="page" href="#">景點列表</a>
+            <a class="nav-link px-6 py-3" aria-current="page" href="./search.html">景點列表</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link px-6 py-3" href="./about.html">關於我們</a>
@@ -81,94 +81,110 @@
           <div class="markLine"></div>
         </div>
       </div>
+      <!-- 安安兒名片 -->
       <div class="container aboutMember">
         <div class="memberCard d-lg-flex p-36 position-relative">
           <img class="aboutDecorate1 position-absolute" src="data:image/png;base64,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" alt="decorate1">
-          <img class="me-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
+          <div class="me-4">
+            <img class="memberImg" src="/japan-seasons/assets/about-us-1-975e5260.png" alt="about-us-1">
+          </div>
           <div>
             <div class="d-flex justify-content-between align-items-center">
-              <div class="mb-2 fs-5">安安兒</div>
+              <div class="mb-4 fs-5">安安兒</div>
             </div>
             <p class="mb-0">團隊大腿/認真負責/目前任職於XX公司</p>
             <p>最喜歡春天的日本,從東京的櫻花大道到京都的古老寺廟,處處彌漫著花香與生機。櫻花盛開,粉紅色花瓣飄舞,點綴在城市的每個角落。大阪的花園裡,新綠盎然,溫暖的陽光和柔和的氣候使這個季節成為探索自然美景和文化魅力的最佳時機。</p>
           </div>
         </div>
+        <!-- 992px以上 阿蘇名片 -->
         <div class="container d-flex justify-content-end">
           <div class="memberCard2 d-lg-flex flex-row-reverse p-36 position-relative">
             <img class="aboutDecorate2 position-absolute" src="/japan-seasons/assets/about-decorate2-f6d8ba23.png" alt="decorate2">
-            <img class="ms-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
-            
+            <div class="ms-4">
+              <img class="memberImg" src="/japan-seasons/assets/about-us-3-c083a8bf.png" alt="about-us-3">
+            </div>
             <div>
               <div class="d-flex flex-row-reverse justify-content-between align-items-center">
-                <div class="mb-2 text-end fs-5">阿蘇</div>
+                <div class="mb-4 text-end fs-5">阿蘇</div>
               </div>
               <p class="text-end mb-0">團隊大頭目/認真負責/目前任職於XX公司</p>
               <p class="text-end">最喜歡夏天的日本，夏天的日本充滿了生氣和活力。東京的淺草花火大會、京都的祇園祭、以及沖繩的海灘,都吸引著眾多遊客。雖然炎熱的天氣帶來了濕氣,但清涼的祭典、美麗的花火和清澈的海水讓人倍感清爽。</p>
             </div>
           </div>
         </div>
-
+        <!-- 991px以下 阿蘇名片 -->
         <div class="container d-lg-none position-relative">
-          <div class="memberCard  p-36 ">
+          <div class="memberCard  p-36">
             <img class="aboutDecorate2 position-absolute" src="/japan-seasons/assets/about-decorate2-f6d8ba23.png" alt="decorate2">       
             <div class="d-flex justify-content-end">
-              <img class="me-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
+              <div class="me-4">
+                <img class="memberImg" src="/japan-seasons/assets/about-us-3-c083a8bf.png" alt="about-us-3">
+              </div>
             </div>
             <div>
               <div class="d-flex fd-column justify-content-between align-items-center">
-                <div class="mb-2 fs-5">阿蘇</div>
+                <div class="mb-4 fs-5">阿蘇</div>
               </div>
               <p class="mb-0">團隊大頭目/認真負責/目前任職於XX公司</p>
               <p>最喜歡夏天的日本，夏天的日本充滿了生氣和活力。東京的淺草花火大會、京都的祇園祭、以及沖繩的海灘,都吸引著眾多遊客。雖然炎熱的天氣帶來了濕氣,但清涼的祭典、美麗的花火和清澈的海水讓人倍感清爽。</div>
           </div>
         </div>
+        <!-- Ho名片 -->
         <div class="memberCard d-lg-flex p-36 position-relative">
           <img class="aboutDecorate1 position-absolute" src="data:image/png;base64,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" alt="decorate1">
-          <img class="me-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
+          <div class="me-4">
+            <img class="memberImg" src="/japan-seasons/assets/about-us-4-9a847f56.png" alt="about-us-4">
+          </div>
           <div>
             <div class="d-flex justify-content-between align-items-center">
-              <div class="mb-2 fs-5">Ho</div>       
+              <div class="mb-4 fs-5">Ho</div>       
             </div>
             <p class="mb-0">團隊技術長/認真負責/現職工程師，喜歡鑽研不同的技術，勇於嘗試</p>
             <p>最喜歡秋天的日本被五彩斑斕的紅葉所裝點。京都的紅葉大道、東京的公園和北海道的山林,展示出壯觀的秋色。涼爽的氣候使得這個季節非常適合遠足和觀賞大自然的變遷,是品味美食和文化的好時機。</p>
           </div>
         </div>
-
+        <!-- 992px以上 David名片 -->
         <div class="container d-flex justify-content-end">
           <div class="memberCard2 d-lg-flex flex-row-reverse p-36 position-relative">
             <img class="aboutDecorate2 position-absolute" src="/japan-seasons/assets/about-decorate2-f6d8ba23.png" alt="decorate2">
-            <img class="ms-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">           
+            <div class="me-4">
+              <img class="memberImg" src="/japan-seasons/assets/about-us-5-317a7673.png" alt="about-us-5">
+            </div>           
             <div>
               <div class="d-flex flex-row-reverse justify-content-between align-items-center">
-                <div class="mb-2 text-end fs-5">David#33</div>
+                <div class="mb-4 text-end fs-5">David#33</div>
               </div>
               <p class="text-end mb-0">團隊顧問/認真負責/目前任職於XX公司/目前為後端工程師，勇於跨入前端領司</p>
               <p class="text-end">最喜歡冬天的日本充滿了雪的魅力。北海道的滑雪勝地、京都的寒梅和東京的溫泉,都展現了冬季獨特的風情。寒冷的氣候讓人期待溫暖的溫泉,節日氣氛中充滿了傳統的慶祝和美味的冬季佳肴。</p>
             </div>
           </div>
         </div>
-
+        <!-- 991px以下 David名片 -->
         <div class="container d-lg-none position-relative">
-          <div class="memberCard  p-36 ">
+          <div class="memberCard  p-36">
             <img class="aboutDecorate2 position-absolute" src="/japan-seasons/assets/about-decorate2-f6d8ba23.png" alt="decorate2">       
             <div class="d-flex justify-content-end">
-              <img class="me-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
+              <div class="me-4">
+                <img class="memberImg" src="/japan-seasons/assets/about-us-5-317a7673.png" alt="about-us-5">
+              </div>
             </div>
             <div>
               <div class="d-flex fd-column justify-content-between align-items-center">
-                <div class="mb-2 fs-5">David#333</div>
+                <div class="mb-4 fs-5">David#333</div>
               </div>
               <p class="mb-0">團隊顧問/認真負責/目前任職於XX公司/目前為後端工程師，勇於跨入前端領域</p>
               <p>最喜歡冬天的日本充滿了雪的魅力。北海道的滑雪勝地、京都的寒梅和東京的溫泉,都展現了冬季獨特的風情。寒冷的氣候讓人期待溫暖的溫泉,節日氣氛中充滿了傳統的慶祝和美味的冬季佳肴。</div>
           </div>
         </div>
-
+        <!-- Atien名片 -->
         <div class="memberCard d-lg-flex p-36 position-relative">
           <img class="aboutDecorate1 position-absolute" src="data:image/png;base64,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" alt="decorate1">
-          <img class="me-4" src="/japan-seasons/assets/about-memberphoto1-8aabb359.png" alt="memberPhoto">
+          <div class="me-4">
+            <img class="memberImg" src="/japan-seasons/assets/about-us-2-1d16020c.png" alt="about-us-2">
+          </div>
           <div>
             <div class="d-flex fd-column justify-content-between align-items-center">
-              <div class="mb-2 fs-5">atien0816</div>
+              <div class="mb-4 fs-5">atien0816</div>
             </div>
             <p class="mb-0">團隊小雜工/認真負責/目前任職於公家機關，挑戰往不同領域邁進</p>
             <p>熱愛日本的每一個季節。春天,櫻花盛開,整個城市被粉紅色的花瓣裝點得如詩如畫。夏天,熱情的花火大會和清涼的海灘帶來無窮樂趣。秋天,紅葉如畫,京都和東京的美麗景色令人驚嘆。冬天,雪景迷人,滑雪場和溫泉讓寒冷的季節充滿溫暖和歡樂。每一季節都有獨特的魅力,使我深深喜愛這片土地。</p>
