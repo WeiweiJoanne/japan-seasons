@@ -173,8 +173,18 @@ a:hover:not(.logo) {
 /* 排序標籤樣式 */
 
 .searchMain{
+    .aboutDecorate5{
+        position: absolute;
+        top:20px;
+        left:50px;
+    }
+    .aboutDecorate6{
+        position: absolute;
+        top:75%;
+        right:20px;
+    }
     .item-list{
-            /* width: 100%; */
+        width: 100%;
         margin-top: 20px;
         /* padding-bottom: 48px; */
         // padding-left: 312px;
@@ -202,7 +212,7 @@ a:hover:not(.logo) {
             margin-bottom: 48px;
             background-color: white;
             img {
-                max-width: 392px; /* 圖片大小 */
+                // max-width: 392px; /* 圖片大小 */
                 // height: 294px; /* 圖片大小 */
                 /* 圖片與文字之間的距離 */
                 margin-right: 24px; 
@@ -271,7 +281,7 @@ a:hover:not(.logo) {
         align-items: center;
         margin: 0 5px;
         cursor: pointer;
-        color: #007bff;
+        color: #A5A5A5;
         font-size: 24px; /* 按鈕圖示大小 */
     }
     .page-number {
@@ -308,8 +318,15 @@ a:hover:not(.logo) {
 
 @media (max-width: 991px) {
     .searchMain{
+        .aboutDecorate5{
+            display: none;
+        }
+        .aboutDecorate6{
+            display: none;
+        }
         .item-list{
             .searchItem{
+                padding: 16px;
                 flex-direction: column;
                 img{
                     margin-right: 0;

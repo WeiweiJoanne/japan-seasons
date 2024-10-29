@@ -116,16 +116,27 @@ img{
                 .aboutDecorate1{
                     top:84px;
                     right:0;
+                    z-index: 1;
+                }
+                .aboutDecorate2{
+                    top:24px;
+                    left: 12px;;
+                    z-index: 1;
+                }
+                .memberImg{
+                    position: relative;
+                    z-index: 2;
                 }
             }
             .memberCard2{
                 padding: 24px;
                 display: none;
+                // .aboutDecorate2{
+                //     top:24px;
+                //     left:12px;
+                // }
             }
-            .aboutDecorate2{
-                top:24px;
-                left:12px;
-            }
+            
     }
     }
 }
