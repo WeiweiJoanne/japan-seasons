@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="member.css">
+    <title>會員中心</title>
+
+</head>
+
+<body>
+    <%- include('./layout/header'); -%>
+
+    <div class="member">
+        <div class="container">
+            <div class="profile">
+                <div class="profile-main">
+                    <div class="profile-image">
+                        <img src="/assets/images/about-us-4.png" alt="用戶頭像">
+                    </div>
+                    <div class="profile-info">
+                        <div class="mb24">
+                            <h3 class="username">Enzo Ho</h3>
+                            <p class="description">分享與紀錄有關日本的大小事!</p>
+                        </div>
+
+                        <div class="d-flex mb24">
+                            <div class="social-media fs-4"><i class="bi bi-facebook"></i></div>
+                            <div class="social-media fs-4"><i class="bi bi-google"></i></div>
+                            <div class="social-media fs-4"><i class="bi bi-instagram"></i></div>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">12</h4>粉絲數
+                            </span>
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">5</h4>收藏數
+                            </span>
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">10</h4>訂閱數
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn btn-outline-primary d-flex justify-content-center align-items-center rounded-pill py-3 px-6">
+                        <span class="material-symbols-outlined mr8">
+                            edit
+                        </span>
+                        <span class="mt5">編輯</span>
+                    </button>
+                    <button type="button" class="btn btn btn-outline-primary d-flex justify-content-center align-items-center rounded-pill py-3 px-6">
+                        <span class="material-symbols-outlined mr8">
+                            settings
+                        </span>
+                        <span class="mt5">設定</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <!-- 分頁標籤 -->
+                <ul class="nav nav-tabs mb-3" id="memberTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab-btn active" id="favorites-tab" data-bs-toggle="tab"
+                            data-bs-target="#favorites" type="button" role="tab" aria-controls="favorites"
+                            aria-selected="true">
+                            <span class="material-symbols-outlined fill">
+                                favorite
+                            </span>
+                            收藏
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link btn btn-outline-primary" id="newsletter-tab" data-bs-toggle="tab"
+                            data-bs-target="#newsletter" type="button" role="tab" aria-controls="newsletter"
+                            aria-selected="false">
+                            <span class="material-symbols-outlined">
+                                menu_book
+                            </span>
+                            電子報
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link btn btn-outline-primary" id="comments-tab" data-bs-toggle="tab"
+                            data-bs-target="#comments" type="button" role="tab" aria-controls="comments"
+                            aria-selected="false">
+                            <span class="material-symbols-outlined">
+                                Sms
+                            </span>
+                            留言紀錄
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- 分頁內容區域 -->
+                <div class="tab-content">
+                    <!-- 收藏頁面 -->
+                    <div class="tab-pane active" id="favorites">
+                        <ul class="favorites-list">
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/assets/images/temple.png" alt="淺草寺">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0">淺草寺</h4>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/assets/images/tokyo-tower.png" alt="東京鐵塔">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0">東京鐵塔</h4>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/assets/images/american-village.png" alt="美國村">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">美國村</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/assets/images/universal.png" alt="環球影城">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">環球影城</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/assets/images/sky-tower.png" alt="晴空塔">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">晴空塔</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            
+                        </ul>
+
+                        <div class="pagination">
+                            <a class="page-button" id="first-page"><span class="material-symbols-outlined">first_page</span></a> <!-- 第一頁 -->
+                            <a class="page-button" id="prev-page"><span class="material-symbols-outlined">chevron_left</span></a> <!-- 上一頁 -->
+                            <a class="page-number">第 1 頁</a> <!-- 當前頁數 -->
+                            <a class="page-button" id="next-page"><span class="material-symbols-outlined">chevron_right</span></a> <!-- 下一頁 -->
+                            <a class="page-button" id="last-page"><span class="material-symbols-outlined">last_page</span></a> <!-- 最後一頁 -->
+                        </div>
+                    </div>
+
+                    <!-- 電子報 -->
+                    <div class="tab-pane" id="newsletter">
+                        <!-- 電子報內容 -->
+                    </div>
+
+                    <!-- 留言紀錄頁面 -->
+                    <div class="tab-pane" id="comments">
+                        <!-- 留言紀錄內容 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>
