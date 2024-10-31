@@ -94,6 +94,9 @@
   }
 
   .scroll-section-btn {
+    &:active{
+      border: transparent
+    }
     i {
       animation: arrowLoop 1s .2s infinite backwards;
     }
