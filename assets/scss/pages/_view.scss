@@ -1,4 +1,7 @@
 
+.viewTitle{
+    margin-bottom: 48px;
+}
 
 .mb-184{
     padding-bottom: 184px;
@@ -6,6 +9,10 @@
 
 .mb-80{
     margin-bottom: 80px;
+}
+
+.mt-80{
+    margin-top: 80px;
 }
 
 .color-test{
@@ -26,4 +33,21 @@
     text-align: center;
     margin-bottom: 16px;
     background-color: white;
+    display: block;
+    width: 300px;
+}
+
+.view-intro{
+    margin-top: 180px;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+
+.commentImg{
+    max-width: 60px;
 }
