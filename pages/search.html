@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="linear-bg">
+    <!-- 1. top -->
+    <%- include('./layout/header'); -%>
+    <!-- 2. header -->
+    <header class="text-white search-container">
+        <div>
+            <div class="search-wrapper">
+                <input type="text" class="search-input" id="search-input" placeholder="搜尋">
+                <span class="material-symbols-outlined search-icon">search</span> 
+            </div>
+            <div class="d-flex options-container">
+                <!-- 選項列表 -->
+                <ul class="options-list " >
+                    <li>東京</li>
+                    <li>大阪</li>
+                    <li>滑雪</li>
+                    <li>京都</li>
+                    <li>東京迪士尼</li>
+                    <li>名古屋</li>
+                    <li>黑部立山</li>
+                    <li>淺草寺</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. main -->
+    <div class="searchMain position-relative">
+        <div class="aboutDecorate5 position-absolute">
+            <img src="../assets/images/about-decorate3.png" alt="about-decorate3">
+        </div>
+        <div class="aboutDecorate6 position-absolute">
+            <img src="../assets/images/about-decorate3.png" alt="about-decorate3">
+        </div>
+        <div class="container">
+            <div class="item-list">
+                <div class="text-end">
+                    <a class="sort-label text-nowrap" href="#">按分數排序：由高到低</a>
+                </div>
+                
+                <!-- 排序標籤 -->
+                <div class="searchItem">
+                    <img src="../assets/images/list_disney.png" alt="Item 1"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            東京迪士尼
+                            <span class="item-score">5.0</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">東京迪士尼是一個充滿魔法和歡樂的地方，適合各年齡層的遊客。園區內有多樣化的遊樂設施和精彩的表演，讓人流連忘返。無論是與家人還是朋友同行，都能在這裡度過美好的時光。記得提前規劃行程，善用快速通關卡，才能玩得更盡興！</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <a class="material-symbols-outlined heart-icon">favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_osaka_castle.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            大阪城
+                            <span class="item-score">4.7</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">大阪城是日本三大名城之一，擁有壯觀的天守閣和豐富的歷史背景。城內展示了豐臣秀吉的相關史料，並且四季皆有美麗的景色，是大阪必訪的景點。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <a class="material-symbols-outlined heart-icon">favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_sensoji_temple.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            清水寺
+                            <span class="item-score">4.6</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">清水寺是京都最古老的寺院之一，擁有壯觀的木製建築和美麗的自然景觀。無論是春天的櫻花、夏天的綠意、秋天的紅葉，還是冬天的白雪，都讓人流連忘返。這裡的歷史和文化氛圍深深吸引著每一位訪客。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <a class="material-symbols-outlined heart-icon">favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_hokkaido.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            北海道
+                            <span class="item-score">4.8</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">北海道之旅讓我感受到四季的美麗。春天的櫻花、夏天的花海、秋天的楓紅和冬天的雪景，每一季都有不同的魅力。美食如海鮮丼和拉麵也讓人難忘。這次旅行讓我放鬆身心，並深刻體會到北海道的自然之美。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <a class="material-symbols-outlined heart-icon">favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchItem">
+                    <img src="../assets/images/list_kyto.png" alt="Item 2"> <!-- 這裡可以替換為實際圖片網址 -->
+                    <div class="item-content">
+                        <div class="item-title">
+                            京都
+                            <span class="item-score">4.3</span> <!-- 分數 -->
+                            <span class="material-symbols-outlined star-icon">star</span> <!-- 星號圖示 -->
+                        </div>
+                        <p class="item-description">京都之旅讓我深刻體會到古都的魅力。嵐山的自然美景和清水寺的歷史氛圍讓人流連忘返。美食特別是京料理和抹茶甜點，讓人回味無窮。這次旅行不僅放鬆身心，也增進了對日本文化的了解。</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <a href="#"><div class="view-more">查看更多</div></a>
+                            <a class="material-symbols-outlined heart-icon">favorite</a>
+                        </div>
+                    </div>
+                </div>  
+                
+                <!-- 分頁功能 -->
+                <div class="pagination">
+                    <a class="page-button" id="first-page"><span class="material-symbols-outlined">first_page</span></a> <!-- 第一頁 -->
+                    <a class="page-button" id="prev-page"><span class="material-symbols-outlined">chevron_left</span></a> <!-- 上一頁 -->
+                    <a class="page-number">第 1 頁</a> <!-- 當前頁數 -->
+                    <a class="page-button" id="next-page"><span class="material-symbols-outlined">chevron_right</span></a> <!-- 下一頁 -->
+                    <a class="page-button" id="last-page"><span class="material-symbols-outlined">last_page</span></a> <!-- 最後一頁 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. footer -->
+    <!-- ================================== -->
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js">
+        const searchInput = document.getElementById("search-input");
+        
+        // 偵測按下 Enter 鍵時觸發搜尋
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const query = searchInput.value;
+                alert("搜尋: " + query); // 這裡你可以替換成實際的搜尋邏輯
+            }
+        });
+
+        // 分頁功能
+        const currentPage = 1; // 當前頁數
+        const totalPages = 5; // 總頁數
+
+        // 假設這裡是你需要的分頁功能的邏輯，你可以擴展這部分來處理實際的頁數變更
+        document.getElementById("first-page").addEventListener("click", function() {
+            alert("返回到第一頁");
+        });
+
+        document.getElementById("prev-page").addEventListener("click", function() {
+            alert("返回到上一頁");
+        });
+
+        document.getElementById("next-page").addEventListener("click", function() {
+            alert("前往下一頁");
+        });
+
+        document.getElementById("last-page").addEventListener("click", function() {
+            alert("前往最後一頁");
+        });
+    </script>
+</body>
+</html>
