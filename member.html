@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="member.css">
+    <title>會員中心</title>
+
+  <script type="module" crossorigin src="/japan-seasons/assets/main-213ef09a.js"></script>
+  <link rel="stylesheet" href="/japan-seasons/assets/main-cf9b9803.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bg-background fixed-top py-3">
+  <div class="container-xxl">
+    <a class="navbar-brand p-0" href="./index.html">
+      <picture>
+        <source media="(max-width: 991px)" srcset="data:image/png;base64,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 ">
+        <img src="/japan-seasons/assets/logo-b6747d12.png">
+      </picture>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end p-0" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-dark ms-auto p-7" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-header justify-content-center">
+        <a class="navbar-brand p-0" href="./index.html">
+          <img src="/japan-seasons/assets/logo-b6747d12.png">
+        </a>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav mx-auto mb-0 d-flex align-items-center gap-3">
+          <li class="nav-item ">
+            <a class="nav-link px-6 py-3" aria-current="page" href="./search.html">景點列表</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link px-6 py-3" href="./about.html">關於我們</a>
+          </li>
+
+        </ul>
+        <div class="user-status btn d-flex gap-3 p-0">
+          <div class="logged-out">
+            <button type="button" class="btn btn-outline-primary rounded-5 px-6 py-3 text-primary sign-up">註冊</button>
+            <button type="button" class="btn btn-primary rounded-5 px-6 py-3 text-white log-in">登入</button>
+          </div>
+          <div class="logged-in">
+            <button type="button" class="btn px-3 py-7 text-black fs-5"><i class="bi bi-suit-heart-fill"></i></button>
+            <a href="./member.html">
+              <button type="button" class="btn px-3 py-7 text-black fs-5"><i class="bi bi-person-fill"></i></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="member">
+        <div class="container">
+            <div class="profile">
+                <div class="profile-main">
+                    <div class="profile-image">
+                        <img src="/japan-seasons/assets/about-us-4-9a847f56.png" alt="用戶頭像">
+                    </div>
+                    <div class="profile-info">
+                        <div class="mb24">
+                            <h3 class="username">Enzo Ho</h3>
+                            <p class="description">分享與紀錄有關日本的大小事!</p>
+                        </div>
+
+                        <div class="d-flex mb24">
+                            <div class="social-media fs-4"><i class="bi bi-facebook"></i></div>
+                            <div class="social-media fs-4"><i class="bi bi-google"></i></div>
+                            <div class="social-media fs-4"><i class="bi bi-instagram"></i></div>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">12</h4>粉絲數
+                            </span>
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">5</h4>收藏數
+                            </span>
+                            <span class="stat-item">
+                                <h4 class="number text-Primary">10</h4>訂閱數
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn btn-outline-primary d-flex justify-content-center align-items-center rounded-pill py-3 px-6">
+                        <span class="material-symbols-outlined mr8">
+                            edit
+                        </span>
+                        <span class="mt5">編輯</span>
+                    </button>
+                    <button type="button" class="btn btn btn-outline-primary d-flex justify-content-center align-items-center rounded-pill py-3 px-6">
+                        <span class="material-symbols-outlined mr8">
+                            settings
+                        </span>
+                        <span class="mt5">設定</span>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <!-- 分頁標籤 -->
+                <ul class="nav nav-tabs mb-3" id="memberTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tab-btn active" id="favorites-tab" data-bs-toggle="tab"
+                            data-bs-target="#favorites" type="button" role="tab" aria-controls="favorites"
+                            aria-selected="true">
+                            <span class="material-symbols-outlined fill">
+                                favorite
+                            </span>
+                            收藏
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link btn btn-outline-primary" id="newsletter-tab" data-bs-toggle="tab"
+                            data-bs-target="#newsletter" type="button" role="tab" aria-controls="newsletter"
+                            aria-selected="false">
+                            <span class="material-symbols-outlined">
+                                menu_book
+                            </span>
+                            電子報
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link btn btn-outline-primary" id="comments-tab" data-bs-toggle="tab"
+                            data-bs-target="#comments" type="button" role="tab" aria-controls="comments"
+                            aria-selected="false">
+                            <span class="material-symbols-outlined">
+                                Sms
+                            </span>
+                            留言紀錄
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- 分頁內容區域 -->
+                <div class="tab-content">
+                    <!-- 收藏頁面 -->
+                    <div class="tab-pane active" id="favorites">
+                        <ul class="favorites-list">
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/japan-seasons/assets/temple-bdb37d9b.png" alt="淺草寺">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0">淺草寺</h4>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/japan-seasons/assets/tokyo-tower-f5652bd0.png" alt="東京鐵塔">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h4 class="mb-0">東京鐵塔</h4>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/japan-seasons/assets/american-village-121e489e.png" alt="美國村">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">美國村</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/japan-seasons/assets/universal-63928d2a.png" alt="環球影城">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">環球影城</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            <li class="favorite-item">
+                                <div class="place-card">
+                                    <div class="place-image">
+                                        <img src="/japan-seasons/assets/sky-tower-fcffd5c4.png" alt="晴空塔">
+                                    </div>
+                                    <div class="place-info">
+                                        <div class="place-title d-flex justify-content-between align-items-center">
+                                            <h3 class="mb-0">晴空塔</h3>
+                                            <span class="text-Primary material-symbols-outlined fill">
+                                                favorite
+                                            </span>
+                                        </div>
+                                        <div class="rating d-flex align-items-center">
+                                            <div class="stars">
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star</span>
+                                                <span class="material-symbols-outlined fill">star_half</span>
+                                                <span class="material-symbols-outlined">star_border</span>
+                                            </div>
+                                            <span class="reviews">心得(8)</span>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </li>
+                            
+                        </ul>
+
+                        <div class="pagination">
+                            <a class="page-button" id="first-page"><span class="material-symbols-outlined">first_page</span></a> <!-- 第一頁 -->
+                            <a class="page-button" id="prev-page"><span class="material-symbols-outlined">chevron_left</span></a> <!-- 上一頁 -->
+                            <a class="page-number">第 1 頁</a> <!-- 當前頁數 -->
+                            <a class="page-button" id="next-page"><span class="material-symbols-outlined">chevron_right</span></a> <!-- 下一頁 -->
+                            <a class="page-button" id="last-page"><span class="material-symbols-outlined">last_page</span></a> <!-- 最後一頁 -->
+                        </div>
+                    </div>
+
+                    <!-- 電子報 -->
+                    <div class="tab-pane" id="newsletter">
+                        <!-- 電子報內容 -->
+                    </div>
+
+                    <!-- 留言紀錄頁面 -->
+                    <div class="tab-pane" id="comments">
+                        <!-- 留言紀錄內容 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer navbar-expand-lg ">
+    <div class="container-xxl py-120">
+
+        <div class="d-flex align-items-center gap-11">
+            <a href="./index.html">
+                <img src="/japan-seasons/assets/logo-b6747d12.png">
+            </a>
+            <ul class="nav d-flex gap-3">
+                <li class="nav-item">
+                    <a class="nav-link fs-6 py-3 px-6 text-black" href="#">景點列表</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-6 py-3 px-6 text-black" href="./about.html">關於我們</a>
+                </li>
+            </ul>
+            <div class="social-media-group d-flex gap-3">
+                <div class="social-media fs-4"><i class="bi bi-facebook"></i></div>
+                <div class="social-media fs-4"><i class="bi bi-instagram"></i></div>
+                <div class="social-media fs-4"><i class="bi bi-linkedin"></i></div>
+                <div class="social-media fs-4"><i class="bi bi-twitter"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black py-4">
+        <p class="text-center fs-7 text-white mb-0">Copyright 2024 日本四季物語 All Rights Reserved.</p>
+        <p class="text-center fs-7 text-white mb-0">僅供學習使用,無商業用途。</p>
+    </div>
+
+</footer>
+    
+</body>
+
+</html>
